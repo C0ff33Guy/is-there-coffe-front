@@ -1,6 +1,6 @@
-type TState = {
+type TStatus = {
   state: boolean | null;
   updatedAt: string;
 }
 
-export default TState;
+export default TStatus;

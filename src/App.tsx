@@ -1,15 +1,13 @@
-import useWebSocket from "react-use-websocket"
-
 import Coffee from "./components/Coffee"
-import State from "./components/State"
+import Status from "./components/Status"
 import Update from "./components/Update"
+import useStatus from "./hooks/useStatus"
 
 function App() {
   const {
-    sendMessage,
-    lastJsonMessage,
-    readyState,
-  } = useWebSocket('/ws');
+    status,
+    fetchStatus,
+  } = useStatus();
 
   return (
     <>
@@ -21,10 +19,10 @@ function App() {
       &nbsp;
       <span>=</span>
       &nbsp;
-      <State state={lastJsonMessage} ready={readyState} />
+      <Status status={status} />
       <br />
       <br />
-      <Update send={sendMessage} />
+      <Update fetchStatus={fetchStatus} />
     </>
   )
 }

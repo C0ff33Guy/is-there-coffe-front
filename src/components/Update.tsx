@@ -1,6 +1,11 @@
-import { SendMessage } from "react-use-websocket";
+function Update({ fetchStatus }: { fetchStatus: () => void }) {
+  async function send(msg: string) {
+    await fetch(`/status/${msg}`, {
+      method: 'POST'
+    });
+    fetchStatus();
+  }
 
-function Update({ send }: { send: SendMessage }) {
   return (
     <>
       <span className="type"><em>define</em></span>
