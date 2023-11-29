@@ -1,0 +1,62 @@
+body,
+html {
+  background: #282A36;
+  color: #F8F8F2;
+  font-family: 'Fira', 'Courier New', Courier, monospace;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  margin: 0 -5px 2px 0;
+  padding: 2px 5px;
+  background: #44475A75;
+  border: none;
+  border-radius: 10px;
+  font-size: .9rem;
+  transition: background-color .2s linear;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #56596cac;
+}
+
+.comment {
+  color: #6272A4;
+  white-space: pre;
+}
+
+.type {
+  color: #8BE9FD;
+}
+
+.var {
+  color: #BD93F9;
+}
+
+.null {
+  color: #F1FA8C;
+}
+
+.undefined {
+  color: #F1FA8C;
+  opacity: .5;
+}
+
+.true {
+  color: #50FA7B;
+  font-weight: bold;
+}
+
+.false {
+  color: #FFB86C;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Fira';
+  src: url(/fonts/Fira.ttf);
+}
